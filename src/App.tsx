@@ -1,24 +1,30 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useState } from "react";
+import logo from "./logo.svg";
+import "./App.css";
+import NewSOForm from "./components/NewSOForm";
+import ShoutoutList from "./components/ShoutoutList";
+import NewShoutout from "../src/models/NewShoutout";
+import { getAllShoutouts } from "./services/shoutoutApiService";
 
 function App() {
+  const [allShoutouts, setAllShoutouts] = useState<NewShoutout[]>([]);
+  const updateList = async (): Promise<void> => {
+    await getAllShoutouts().then((res) => {
+      setAllShoutouts(res);
+    });
+  };
+
+  useEffect(() => {
+    updateList();
+  }, []);
+
+  useEffect(() => {
+    //call api, set shoutouts
+  }, []);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <ShoutoutList allShoutouts={allShoutouts} update={updateList} />
+      <NewSOForm update={updateList} />
     </div>
   );
 }
