@@ -1,21 +1,24 @@
-import { useEffect, useState } from "react";
 import "./ShoutoutList.css";
 import SingleShoutout from "./SingleShoutout";
-import NewSOForm from "./NewSOForm";
 import NewShoutout from "../models/NewShoutout";
 
 interface Props {
   allShoutouts: NewShoutout[];
+  name?: string;
   update: () => void;
 }
 
-const ShoutoutList = ({ allShoutouts, update }: Props) => {
+const ShoutoutList = ({ allShoutouts, name, update }: Props) => {
   return (
     <div className="ShoutoutList">
+      {name ? <h2>Shoutouts to {name}</h2> : <h2>All Shoutouts</h2>}
       <ul>
-        <NewSOForm update={update} />
         {allShoutouts.map((shoutout) => (
-          <SingleShoutout shoutout={shoutout} key={shoutout._id} />
+          <SingleShoutout
+            shoutout={shoutout}
+            key={shoutout._id}
+            update={update}
+          />
         ))}
       </ul>
     </div>

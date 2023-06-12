@@ -1,0 +1,18 @@
+.NewSOForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.NewSOForm #to {
+  margin: 10px;
+}
+
+.NewSOForm #from {
+  margin: 10px;
+}
+
+.NewSOForm button {
+  margin: 10px;
+}

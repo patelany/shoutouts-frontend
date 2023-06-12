@@ -1,0 +1,32 @@
+.ShoutoutList {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(141, 180, 235);
+}
+
+.ShoutoutList h2 {
+  color: rgb(6, 97, 154);
+}
+
+.ShoutoutList > ul > li {
+  border: 1px solid black;
+  margin: 15px;
+  padding: 10px;
+  list-style: none;
+  background-color: white;
+}
+
+.ShoutoutList > ul > li > h3 {
+  border-bottom: 1px solid black;
+  margin-bottom: 10px;
+}
+.ShoutoutList .user-link {
+  text-decoration: none;
+  color: rgb(6, 97, 154);
+}
+.ShoutoutList .from {
+  color: rgb(124, 125, 152);
+  margin: 10px;
+}

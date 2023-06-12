@@ -1,0 +1,47 @@
+.Header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(6, 97, 154);
+  color: rgb(141, 180, 235);
+}
+
+.Header .loggedIn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.Header .loggedOut {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.Header h1 {
+  padding: 10px;
+}
+
+.Header .home-link:hover {
+  text-decoration: none;
+  color: white;
+}
+
+.Header .loggedIn > p {
+  padding: 10px;
+}
+
+.Header .loggedIn > button {
+  margin-top: 10px;
+}
+
+.Header .loggedOut > p {
+  padding: 10px;
+}
+
+.Header button {
+  padding: 3px;
+  margin-bottom: 10px;
+}

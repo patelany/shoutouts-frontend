@@ -1,0 +1,20 @@
+.Details {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(141, 180, 235);
+}
+
+.Details h2 {
+  margin-top: 45px;
+  padding: 15px;
+}
+
+.Details .home-link {
+  text-decoration: none;
+  color: rgb(6, 97, 154);
+  position: absolute;
+  top: 50%;
+  left: 0;
+  margin: 5px;
+}
