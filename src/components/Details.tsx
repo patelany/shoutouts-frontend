@@ -30,7 +30,7 @@ const Details = () => {
 
   useEffect(() => {
     updateList();
-  }, [name, user]);
+  }, [name, user, updateList]);
   console.log(userShoutouts);
 
   return (

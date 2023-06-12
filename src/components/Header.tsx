@@ -2,7 +2,6 @@ import { useContext } from "react";
 import { signInWithGoogle, signOut } from "../firebaseConfig";
 import "./Header.css";
 import AuthContext from "../context/AuthContext";
-import { Link } from "react-router-dom";
 
 const Header = () => {
   const { user } = useContext(AuthContext);

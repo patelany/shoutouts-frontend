@@ -16,7 +16,7 @@ const NewSOForm = ({ update, name }: Props) => {
   const [to, setTo] = useState("");
   const [from, setFrom] = useState("");
   const [shoutoutMsg, setShoutoutMsg] = useState("");
-  const newShoutout: NewShoutout = { to, from, text: shoutoutMsg };
+
   const fileUploadRef = useRef<HTMLInputElement>(null);
   // if user is logged in with Google:
   // && the user has a photoURL
