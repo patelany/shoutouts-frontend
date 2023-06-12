@@ -1,5 +1,5 @@
 import "./Main.css";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import NewSOForm from "./NewSOForm";
 import ShoutoutList from "./ShoutoutList";
 import NewShoutout from "../models/NewShoutout";

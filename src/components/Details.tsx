@@ -1,10 +1,9 @@
 import {
-  getAllShoutouts,
   getMyShoutouts,
   getUserShoutouts,
 } from "../services/shoutoutApiService";
 import "./Details.css";
-import React, { useContext, useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import ShoutoutList from "./ShoutoutList";
 import { Link, useParams } from "react-router-dom";
 import NewShoutout from "../models/NewShoutout";

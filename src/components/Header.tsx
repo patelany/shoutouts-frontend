@@ -15,7 +15,7 @@ const Header = () => {
         {user ? (
           <div className="loggedIn">
             <p>Welcome, {user?.displayName}</p>
-            <img src={user.photoURL || ""} alt="profile image" />
+            <img src={user.photoURL || ""} alt="profile" />
             <button onClick={() => signOut()}>Sign Out</button>
           </div>
         ) : (

@@ -36,7 +36,7 @@ const SingleShoutout = ({ shoutout, update }: Props) => {
           <img
             className="author-img"
             src={shoutout.authorPhoto}
-            alt="author profile image"
+            alt="author profile"
           />
         )}
         <Link to={`/user/${encodeURIComponent(shoutout.from)}`}>
@@ -45,7 +45,7 @@ const SingleShoutout = ({ shoutout, update }: Props) => {
       </p>
       <p style={{ textAlign: "center" }}>{shoutout.text}</p>
       {shoutout.shoutoutPhoto && (
-        <img src={shoutout.shoutoutPhoto} alt="shoutout photo" />
+        <img src={shoutout.shoutoutPhoto} alt="shoutout" />
       )}
       <button onClick={deleteHandler}>delete</button>
     </li>
