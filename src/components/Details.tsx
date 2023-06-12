@@ -29,8 +29,19 @@ const Details = () => {
   };
 
   useEffect(() => {
-    updateList();
-  }, [name, user, updateList]);
+    if (name) {
+      getUserShoutouts(name).then((res) => {
+        setUserShoutouts(res);
+      });
+    } else {
+      if (user) {
+        getMyShoutouts(user.displayName!).then((res) => {
+          setUserShoutouts(res);
+          console.log(res);
+        });
+      }
+    }
+  }, [name, user]);
   console.log(userShoutouts);
 
   return (
